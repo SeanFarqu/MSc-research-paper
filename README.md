@@ -2,6 +2,18 @@
 
 # Overdispersion in Count Modelling with an NHL Draft Application: Measuring Player Success
 
+## 2026 update: the Expected Success Model
+
+The project has been rebuilt and extended in [`expected-success-model/`](expected-success-model/):
+every NHL draft pick from 2005 to 2019 straight from the NHL's API, only information known
+on draft day, a count model that cannot project more games than the schedule allows, and
+testing on draft classes the model never saw. With NHL Central Scouting's ranks it
+separates future NHL players from the rest better than the order teams actually drafted in
+(0.807 against 0.784), and it projects every skater drafted from 2020 to 2026.
+See the [write-up](expected-success-model/README.md) for what changed and why.
+
+The original 2021 report follows.
+
 ## Author
 Sean Farquharson (sfarqu2@uwo.ca)  
 Supervised by Dr. Douglas Woolford  

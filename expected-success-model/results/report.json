@@ -1,0 +1,822 @@
+{
+ "years": [
+  2005,
+  2019
+ ],
+ "skaters": {
+  "picks": 2860,
+  "never_played": 0.508,
+  "gate_auc_model": 0.767,
+  "gate_auc_draft_order": 0.773,
+  "gate_logloss_model": 0.5734,
+  "gate_logloss_draft_order": 0.5534,
+  "spearman_model_mean": 0.517,
+  "spearman_draft_order_mean": 0.547,
+  "spearman_by_class": {
+   "2005": [
+    0.38,
+    0.454
+   ],
+   "2006": [
+    0.493,
+    0.496
+   ],
+   "2007": [
+    0.436,
+    0.405
+   ],
+   "2008": [
+    0.38,
+    0.469
+   ],
+   "2009": [
+    0.599,
+    0.583
+   ],
+   "2010": [
+    0.629,
+    0.572
+   ],
+   "2011": [
+    0.463,
+    0.537
+   ],
+   "2012": [
+    0.502,
+    0.486
+   ],
+   "2013": [
+    0.636,
+    0.63
+   ],
+   "2014": [
+    0.446,
+    0.552
+   ],
+   "2015": [
+    0.473,
+    0.567
+   ],
+   "2016": [
+    0.641,
+    0.648
+   ],
+   "2017": [
+    0.518,
+    0.619
+   ],
+   "2018": [
+    0.556,
+    0.555
+   ],
+   "2019": [
+    0.602,
+    0.626
+   ]
+  },
+  "calibration_deciles": [
+   [
+    0.117,
+    0.122,
+    286
+   ],
+   [
+    0.218,
+    0.21,
+    286
+   ],
+   [
+    0.299,
+    0.332,
+    286
+   ],
+   [
+    0.371,
+    0.388,
+    286
+   ],
+   [
+    0.449,
+    0.441,
+    286
+   ],
+   [
+    0.528,
+    0.507,
+    286
+   ],
+   [
+    0.603,
+    0.601,
+    286
+   ],
+   [
+    0.681,
+    0.682,
+    286
+   ],
+   [
+    0.77,
+    0.741,
+    286
+   ],
+   [
+    0.89,
+    0.895,
+    286
+   ]
+  ],
+  "gate_auc_draft_plus_model": 0.814,
+  "gate_logloss_draft_plus_model": 0.5159,
+  "late_picks_model_liked": {
+   "picks": 107,
+   "played_share": 0.551,
+   "draft_order_expected_share": 0.439,
+   "mean_games": 52.8
+  },
+  "late_picks_all": {
+   "picks": 2019,
+   "played_share": 0.351,
+   "mean_games": 33.4
+  },
+  "count_mae_log": 1.129,
+  "ridge": {
+   "gate": 0.3,
+   "count": 0.3
+  },
+  "gate_coef": {
+   "intercept": -3.178,
+   "age": -0.312,
+   "height": -0.289,
+   "weight": 0.874,
+   "defence": 0.367,
+   "centre": 0.073,
+   "log_gp": 0.344,
+   "goals_pg": -0.811,
+   "pim_pg": -0.236,
+   "country_USA": -0.31,
+   "country_SWE": 0.301,
+   "country_FIN": -0.176,
+   "country_RUS": -0.294,
+   "country_CZE": 0.373,
+   "country_SVK": -0.567,
+   "country_OTHER": 0.132,
+   "league_WHL": -0.509,
+   "league_QMJHL": -0.393,
+   "league_USHL": 0.434,
+   "league_NTDP": 0.221,
+   "league_NCAA": 1.58,
+   "league_EuroPro": 1.864,
+   "league_EuroLow": 1.16,
+   "league_EuroJr": 0.191,
+   "league_JrA": -0.688,
+   "league_HS": -0.319,
+   "league_Other": 1.446,
+   "ppg_OHL": 3.201,
+   "ppg_WHL": 3.541,
+   "ppg_QMJHL": 2.863,
+   "ppg_USHL": 2.791,
+   "ppg_NTDP": 3.658,
+   "ppg_NCAA": 2.962,
+   "ppg_EuroPro": 3.072,
+   "ppg_EuroLow": 1.409,
+   "ppg_EuroJr": 1.725,
+   "ppg_JrA": 2.357,
+   "ppg_HS": 1.29,
+   "ppg_Other": 0.205,
+   "ppg_x_age": -0.302,
+   "ppg_change": -0.626,
+   "no_d1": -0.029
+  },
+  "count_coef": {
+   "intercept": -2.847,
+   "age": -0.433,
+   "height": 0.026,
+   "weight": 0.327,
+   "defence": 0.42,
+   "centre": 0.027,
+   "log_gp": -0.013,
+   "goals_pg": -0.15,
+   "pim_pg": -0.0,
+   "country_USA": -0.104,
+   "country_SWE": 0.263,
+   "country_FIN": -0.304,
+   "country_RUS": -0.346,
+   "country_CZE": -0.048,
+   "country_SVK": -0.585,
+   "country_OTHER": -0.003,
+   "league_WHL": 0.171,
+   "league_QMJHL": -0.496,
+   "league_USHL": -0.585,
+   "league_NTDP": -0.07,
+   "league_NCAA": 0.781,
+   "league_EuroPro": 1.18,
+   "league_EuroLow": 1.145,
+   "league_EuroJr": 0.117,
+   "league_JrA": -0.052,
+   "league_HS": 0.886,
+   "league_Other": 1.379,
+   "ppg_OHL": 2.098,
+   "ppg_WHL": 1.793,
+   "ppg_QMJHL": 2.199,
+   "ppg_USHL": 2.321,
+   "ppg_NTDP": 2.083,
+   "ppg_NCAA": 1.736,
+   "ppg_EuroPro": 2.926,
+   "ppg_EuroLow": 0.462,
+   "ppg_EuroJr": 1.281,
+   "ppg_JrA": 1.388,
+   "ppg_HS": 0.38,
+   "ppg_Other": 0.027,
+   "ppg_x_age": 0.001,
+   "ppg_change": -0.332,
+   "no_d1": 0.082,
+   "log_alpha": 0.914
+  }
+ },
+ "goalies": {
+  "picks": 331,
+  "never_played": 0.565,
+  "gate_auc_model": 0.618,
+  "gate_auc_draft_order": 0.697,
+  "gate_logloss_model": 0.6714,
+  "gate_logloss_draft_order": 0.6202,
+  "spearman_model_mean": 0.203,
+  "spearman_draft_order_mean": 0.366,
+  "spearman_by_class": {
+   "2005": [
+    0.424,
+    0.439
+   ],
+   "2006": [
+    0.321,
+    0.637
+   ],
+   "2007": [
+    -0.032,
+    0.014
+   ],
+   "2008": [
+    -0.118,
+    0.074
+   ],
+   "2009": [
+    0.459,
+    0.278
+   ],
+   "2010": [
+    0.209,
+    0.421
+   ],
+   "2011": [
+    -0.308,
+    0.056
+   ],
+   "2012": [
+    0.459,
+    0.492
+   ],
+   "2013": [
+    0.432,
+    0.267
+   ],
+   "2014": [
+    0.303,
+    0.613
+   ],
+   "2015": [
+    0.016,
+    0.545
+   ],
+   "2016": [
+    -0.028,
+    0.549
+   ],
+   "2017": [
+    0.161,
+    0.256
+   ],
+   "2018": [
+    0.494,
+    0.568
+   ],
+   "2019": [
+    0.247,
+    0.284
+   ]
+  },
+  "calibration_deciles": [
+   [
+    0.229,
+    0.382,
+    34
+   ],
+   [
+    0.309,
+    0.294,
+    34
+   ],
+   [
+    0.36,
+    0.382,
+    34
+   ],
+   [
+    0.394,
+    0.265,
+    34
+   ],
+   [
+    0.429,
+    0.353,
+    34
+   ],
+   [
+    0.46,
+    0.5,
+    34
+   ],
+   [
+    0.488,
+    0.529,
+    34
+   ],
+   [
+    0.515,
+    0.576,
+    33
+   ],
+   [
+    0.549,
+    0.588,
+    34
+   ],
+   [
+    0.633,
+    0.529,
+    34
+   ]
+  ],
+  "gate_auc_draft_plus_model": 0.698,
+  "gate_logloss_draft_plus_model": 0.6189,
+  "late_picks_model_liked": {
+   "picks": 275,
+   "played_share": 0.378,
+   "draft_order_expected_share": 0.368,
+   "mean_games": 15.4
+  },
+  "late_picks_all": {
+   "picks": 275,
+   "played_share": 0.378,
+   "mean_games": 15.4
+  },
+  "count_mae_log": 1.511,
+  "ridge": {
+   "gate": 3,
+   "count": 0.3
+  },
+  "gate_coef": {
+   "intercept": -2.415,
+   "age": -0.143,
+   "height": 0.202,
+   "log_gp": 0.549,
+   "sv": 0.232,
+   "no_sv": 0.294,
+   "league_US": -0.637,
+   "league_EUR": 0.323
+  },
+  "count_coef": {
+   "intercept": -10.911,
+   "age": -0.748,
+   "height": 0.491,
+   "log_gp": 2.026,
+   "sv": 0.32,
+   "no_sv": 1.609,
+   "league_US": -1.259,
+   "league_EUR": -0.169,
+   "log_alpha": 1.293
+  }
+ },
+ "skaters_with_scouting": {
+  "picks": 2276,
+  "never_played": 0.497,
+  "gate_auc_model": 0.805,
+  "gate_auc_draft_order": 0.784,
+  "gate_logloss_model": 0.5298,
+  "gate_logloss_draft_order": 0.5412,
+  "spearman_model_mean": 0.591,
+  "spearman_draft_order_mean": 0.57,
+  "spearman_by_class": {
+   "2008": [
+    0.463,
+    0.469
+   ],
+   "2009": [
+    0.61,
+    0.583
+   ],
+   "2010": [
+    0.681,
+    0.572
+   ],
+   "2011": [
+    0.545,
+    0.537
+   ],
+   "2012": [
+    0.53,
+    0.486
+   ],
+   "2013": [
+    0.635,
+    0.63
+   ],
+   "2014": [
+    0.489,
+    0.552
+   ],
+   "2015": [
+    0.565,
+    0.567
+   ],
+   "2016": [
+    0.706,
+    0.648
+   ],
+   "2017": [
+    0.624,
+    0.619
+   ],
+   "2018": [
+    0.588,
+    0.555
+   ],
+   "2019": [
+    0.658,
+    0.626
+   ]
+  },
+  "calibration_deciles": [
+   [
+    0.098,
+    0.092,
+    228
+   ],
+   [
+    0.189,
+    0.202,
+    228
+   ],
+   [
+    0.267,
+    0.36,
+    228
+   ],
+   [
+    0.344,
+    0.329,
+    228
+   ],
+   [
+    0.435,
+    0.395,
+    228
+   ],
+   [
+    0.529,
+    0.509,
+    228
+   ],
+   [
+    0.629,
+    0.61,
+    228
+   ],
+   [
+    0.736,
+    0.741,
+    228
+   ],
+   [
+    0.846,
+    0.829,
+    228
+   ],
+   [
+    0.956,
+    0.961,
+    228
+   ]
+  ],
+  "gate_auc_draft_plus_model": 0.822,
+  "gate_logloss_draft_plus_model": 0.5052,
+  "late_picks_model_liked": {
+   "picks": 26,
+   "played_share": 0.615,
+   "draft_order_expected_share": 0.468,
+   "mean_games": 54.6
+  },
+  "late_picks_all": {
+   "picks": 1599,
+   "played_share": 0.354,
+   "mean_games": 33.6
+  },
+  "count_mae_log": 1.075,
+  "same_picks_production_only": {
+   "gate_auc_model": 0.775,
+   "gate_auc_draft_order": 0.784,
+   "gate_logloss_model": 0.5656,
+   "gate_logloss_draft_order": 0.5412,
+   "spearman_model_mean": 0.536,
+   "gate_auc_draft_plus_model": 0.824,
+   "gate_logloss_draft_plus_model": 0.5026
+  },
+  "ridge": {
+   "gate": 0.3,
+   "count": 0.3
+  },
+  "count_models": {
+   "zero_truncated_beta_binomial": {
+    "mae_log": 1.075,
+    "largest_prediction": 481.5,
+    "most_possible": 563,
+    "over_300": [
+     81,
+     365.5,
+     381.6
+    ]
+   },
+   "zero_truncated_negative_binomial": {
+    "mae_log": 1.092,
+    "largest_prediction": 1238.2,
+    "most_possible": 563,
+    "over_300": [
+     84,
+     424.9,
+     376.7
+    ]
+   }
+  }
+ },
+ "skaters_with_scouting_and_more": {
+  "picks": 2276,
+  "never_played": 0.497,
+  "gate_auc_model": 0.807,
+  "gate_auc_draft_order": 0.784,
+  "gate_logloss_model": 0.5293,
+  "gate_logloss_draft_order": 0.5412,
+  "spearman_model_mean": 0.597,
+  "spearman_draft_order_mean": 0.57,
+  "spearman_by_class": {
+   "2008": [
+    0.47,
+    0.469
+   ],
+   "2009": [
+    0.622,
+    0.583
+   ],
+   "2010": [
+    0.684,
+    0.572
+   ],
+   "2011": [
+    0.56,
+    0.537
+   ],
+   "2012": [
+    0.545,
+    0.486
+   ],
+   "2013": [
+    0.646,
+    0.63
+   ],
+   "2014": [
+    0.505,
+    0.552
+   ],
+   "2015": [
+    0.583,
+    0.567
+   ],
+   "2016": [
+    0.693,
+    0.648
+   ],
+   "2017": [
+    0.616,
+    0.619
+   ],
+   "2018": [
+    0.591,
+    0.555
+   ],
+   "2019": [
+    0.653,
+    0.626
+   ]
+  },
+  "calibration_deciles": [
+   [
+    0.09,
+    0.105,
+    228
+   ],
+   [
+    0.18,
+    0.162,
+    228
+   ],
+   [
+    0.264,
+    0.329,
+    228
+   ],
+   [
+    0.346,
+    0.36,
+    228
+   ],
+   [
+    0.428,
+    0.421,
+    228
+   ],
+   [
+    0.532,
+    0.526,
+    228
+   ],
+   [
+    0.635,
+    0.599,
+    227
+   ],
+   [
+    0.744,
+    0.724,
+    228
+   ],
+   [
+    0.851,
+    0.838,
+    228
+   ],
+   [
+    0.96,
+    0.965,
+    228
+   ]
+  ],
+  "gate_auc_draft_plus_model": 0.823,
+  "gate_logloss_draft_plus_model": 0.5048,
+  "late_picks_model_liked": {
+   "picks": 28,
+   "played_share": 0.571,
+   "draft_order_expected_share": 0.452,
+   "mean_games": 53.4
+  },
+  "late_picks_all": {
+   "picks": 1599,
+   "played_share": 0.354,
+   "mean_games": 33.6
+  },
+  "count_mae_log": 1.072,
+  "ridge": {
+   "gate": 0.3,
+   "count": 0.3
+  },
+  "count_check": {
+   "mae_log": 1.072,
+   "largest_prediction": 467.5,
+   "most_possible": 563,
+   "over_300": [
+    83,
+    368.7,
+    377.5
+   ]
+  },
+  "gate_coef": {
+   "intercept": -2.917,
+   "age": 0.165,
+   "height": -0.377,
+   "weight": 0.795,
+   "defence": 0.17,
+   "centre": 0.128,
+   "log_gp": 0.362,
+   "goals_pg": -0.763,
+   "pim_pg": -0.198,
+   "country_USA": -0.557,
+   "country_SWE": -0.163,
+   "country_FIN": -0.61,
+   "country_RUS": -0.566,
+   "country_CZE": 0.008,
+   "country_SVK": -0.343,
+   "country_OTHER": -0.218,
+   "league_WHL": -1.003,
+   "league_QMJHL": -0.938,
+   "league_USHL": 0.338,
+   "league_NTDP": 0.04,
+   "league_NCAA": 1.203,
+   "league_EuroPro": 1.141,
+   "league_EuroLow": 0.54,
+   "league_EuroJr": 0.417,
+   "league_JrA": -0.722,
+   "league_HS": -0.913,
+   "league_Other": 0.914,
+   "ppg_OHL": 1.562,
+   "ppg_WHL": 2.246,
+   "ppg_QMJHL": 2.157,
+   "ppg_USHL": 1.802,
+   "ppg_NTDP": 1.943,
+   "ppg_NCAA": 1.934,
+   "ppg_EuroPro": 1.434,
+   "ppg_EuroLow": 0.254,
+   "ppg_EuroJr": 0.649,
+   "ppg_JrA": 1.563,
+   "ppg_HS": 1.181,
+   "ppg_Other": 0.073,
+   "ppg_x_age": -0.266,
+   "ppg_change": -0.373,
+   "no_d1": 0.106,
+   "css_na": -0.999,
+   "css_intl": -0.689,
+   "css_listed_na": 4.714,
+   "css_listed_intl": 3.003,
+   "po_ppg": 0.484,
+   "po_played": -0.28,
+   "u18_played": 0.308,
+   "u18_ppg": 0.12,
+   "u20_played": 0.316,
+   "u20_ppg": -0.241,
+   "pm_pg": 0.468,
+   "no_pm": 0.291,
+   "es_goals_pg": -0.489,
+   "no_es": -0.364,
+   "ppg_change_2y": 0.071,
+   "no_d2": 0.138
+  },
+  "count_coef": {
+   "intercept": -3.018,
+   "age": -0.175,
+   "height": -0.121,
+   "weight": 0.319,
+   "defence": 0.18,
+   "centre": 0.008,
+   "log_gp": 0.119,
+   "goals_pg": -0.31,
+   "pim_pg": -0.057,
+   "country_USA": 0.008,
+   "country_SWE": 0.176,
+   "country_FIN": -0.15,
+   "country_RUS": -0.337,
+   "country_CZE": -0.057,
+   "country_SVK": 0.408,
+   "country_OTHER": -0.001,
+   "league_WHL": 0.038,
+   "league_QMJHL": -0.602,
+   "league_USHL": -0.533,
+   "league_NTDP": 0.219,
+   "league_NCAA": 0.519,
+   "league_EuroPro": 0.603,
+   "league_EuroLow": 1.203,
+   "league_EuroJr": 0.4,
+   "league_JrA": 0.117,
+   "league_HS": 1.332,
+   "league_Other": 0.898,
+   "ppg_OHL": 0.984,
+   "ppg_WHL": 0.707,
+   "ppg_QMJHL": 1.3,
+   "ppg_USHL": 1.52,
+   "ppg_NTDP": 0.834,
+   "ppg_NCAA": 0.917,
+   "ppg_EuroPro": 1.562,
+   "ppg_EuroLow": -0.657,
+   "ppg_EuroJr": 0.485,
+   "ppg_JrA": 0.651,
+   "ppg_HS": -0.088,
+   "ppg_Other": 0.151,
+   "ppg_x_age": 0.165,
+   "ppg_change": 0.021,
+   "no_d1": 0.078,
+   "css_na": -0.528,
+   "css_intl": -0.448,
+   "css_listed_na": 2.368,
+   "css_listed_intl": 1.722,
+   "po_ppg": 0.275,
+   "po_played": 0.016,
+   "u18_played": -0.141,
+   "u18_ppg": 0.149,
+   "u20_played": 0.333,
+   "u20_ppg": -0.364,
+   "pm_pg": -0.169,
+   "no_pm": 0.209,
+   "es_goals_pg": -0.981,
+   "no_es": -0.43,
+   "ppg_change_2y": -0.033,
+   "no_d2": 0.145,
+   "log_alpha": 1.103
+  }
+ }
+}
