@@ -67,23 +67,23 @@ All numbers are out of sample: each draft class predicted by a model that never 
 | Skaters drafted 2008 to 2019 (2,276) | Separating players from non-players (AUC) | Ranking each class by career games (Spearman, mean over classes) |
 |---|---|---|
 | The actual draft order | 0.784 | 0.570 |
-| Model, production only | 0.775 | 0.536 |
-| Model, production + Central Scouting | 0.805 | 0.591 |
-| **Model, production + Central Scouting + playoffs, international events, plus-minus** | **0.807** | **0.597** |
+| Model, production only | 0.776 | 0.537 |
+| Model, production + Central Scouting | 0.806 | 0.594 |
+| **Model, production + Central Scouting + playoffs, international events, plus-minus** | **0.807** | **0.600** |
 | Draft order and the published model together | 0.823 | |
 
 - With Central Scouting's ranks, the model **beats the order teams actually drafted in**,
-  and the published version ranked 10 of the 12 classes closer to how careers turned out.
-- From box-score production alone it nearly matches the draft (0.775 against 0.784), and
+  and the published version ranked 9 of the 12 classes closer to how careers turned out.
+- From box-score production alone it nearly matches the draft (0.776 against 0.784), and
   it still adds information the draft order does not have: the two together reach 0.823.
 - It is well calibrated: split into ten groups by predicted chance, the predicted share and
   the share who actually played are within 4 points in nine of the ten (the tenth: 26%
-  predicted, 33% played).
+  predicted, 34% played).
 
 ![Calibration](results/calibration.png)
 
 **Finding players the draft missed.** Taking the production-only model's top 30 of each
-class (no scouting input at all), the ones drafted after 60th played an NHL game 55% of
+class (no scouting input at all), the ones drafted after 60th played an NHL game 54% of
 the time, against the 44% their draft slots predicted and 35% for all late picks.
 
 ![Late picks](results/late_picks.png)
@@ -92,7 +92,7 @@ the time, against the 44% their draft slots predicted and 35% for all late picks
 
 The 2021 report's best fit used a zero-truncated negative binomial. Its mean is
 exp(linear predictor) with nothing to stop it, and on the full data that shows: refitted
-here, it projected **1,238 games** in his first seven seasons for Auston Matthews (2016),
+here, it projected **1,241 games** in his first seven seasons for Auston Matthews (2016),
 when his club played 537 games in those seasons (two were shortened by COVID). He played 481.
 
 Modelling games as a share of the schedule (beta-binomial) fixes the ceiling and fits
@@ -100,11 +100,11 @@ better everywhere (both fitted with the same inputs, production + Central Scouti
 
 | Count part, out of sample | Typical error (log scale) | Largest projection | Players projected 300+: projected / actual |
 |---|---|---|---|
-| Zero-truncated negative binomial (2021) | 1.092 | 1,238 games | 425 / 377 |
-| **Zero-truncated beta-binomial (2026)** | **1.075** | **482 games** | **366 / 382** |
+| Zero-truncated negative binomial (2021) | 1.092 | 1,241 games | 427 / 381 |
+| **Zero-truncated beta-binomial (2026)** | **1.072** | **484 games** | **364 / 382** |
 
-In the published model Matthews projects at 460 games (481 played) and Connor McDavid at
-442 (487).
+In the published model Matthews projects at 464 games (481 played) and Connor McDavid at
+446 (487).
 
 ## What the model learned
 
@@ -121,7 +121,7 @@ In the published model Matthews projects at 460 games (481 played) and Connor Mc
   playing against adults at 18 is itself a signal.
 - **Playoffs and national teams count.** Scoring in the draft-season playoffs and making a
   national team at U18 or U20 each raise a pick's chances beyond his regular season.
-- **Goalies are hard.** Their model separated players from non-players at 0.62 against the
+- **Goalies are hard.** Their model separated players from non-players at 0.63 against the
   draft order's 0.70, so goalie projections are left out.
 
 ## The 2026 draft class
@@ -132,19 +132,19 @@ change them.
 
 | Pick | Player | Team | Draft-season league | Chance to play | Expected games (7 seasons) |
 |---|---|---|---|---|---|
-| 2 | Ivar Stenberg | SJS | SHL | 98% | 406 |
-| 1 | Gavin McKenna | TOR | NCAA | >99% | 391 |
-| 6 | Carson Carels | CGY | WHL | 99% | 343 |
-| 7 | Chase Reid | SEA | OHL | 97% | 324 |
-| 15 | Nikita Klepov | ANA | OHL | 97% | 311 |
-| 9 | Keaton Verhoeff | SJS | NCAA | 99% | 310 |
-| 4 | Daxon Rudolph | BUF | WHL | 98% | 286 |
-| 5 | Alberts Smits | NYR | Liiga | 96% | 278 |
-| 3 | Caleb Malhotra | VAN | OHL | 96% | 267 |
-| 17 | Ethan Belchetz | UTA | OHL | 97% | 242 |
+| 2 | Ivar Stenberg | SJS | SHL | 98% | 403 |
+| 1 | Gavin McKenna | TOR | NCAA | >99% | 384 |
+| 6 | Carson Carels | CGY | WHL | 99% | 348 |
+| 7 | Chase Reid | SEA | OHL | 97% | 334 |
+| 15 | Nikita Klepov | ANA | OHL | 97% | 315 |
+| 9 | Keaton Verhoeff | SJS | NCAA | 99% | 313 |
+| 4 | Daxon Rudolph | BUF | WHL | 98% | 289 |
+| 5 | Alberts Smits | NYR | Liiga | 96% | 276 |
+| 3 | Caleb Malhotra | VAN | OHL | 96% | 271 |
+| 17 | Ethan Belchetz | UTA | OHL | 97% | 244 |
 
-Late picks it likes most: Tomas Chrenko (81st, NYR), Tomas Kralovic (90th, TBL), Adam
-Valentini (96th, UTA), Blake Zielinski (80th, LAK) and Ola Palme (166th, SEA). Every
+Late picks it likes most: Tomas Kralovic (90th, TBL), Tomas Chrenko (81st, NYR), Wiggo
+Sorensson (61st, CAR), Adam Valentini (96th, UTA) and Ola Palme (166th, SEA). Every
 skater from 2020 to 2026 is in `results/projections_2020_2026.csv`.
 
 ## Data looked at and not used
@@ -153,7 +153,8 @@ skater from 2020 to 2026 is in `results/projections_2020_2026.csv`.
   for every prospect.
 - **Elite Prospects:** the richest prospect database, but a paid licence.
 - **League sites (CHL, USHL and others):** finer stats such as shots and even-strength
-  points for every league, but they need a terms-of-use review before automated collection.
+  points for every league, but their terms allow personal, noncommercial use only (USHL) or
+  require the league's written permission (CHL).
 - **Scouting reports and articles:** copyrighted text.
 
 ## Limitations

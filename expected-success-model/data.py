@@ -49,19 +49,20 @@ GROUPS: list[tuple[str, str]] = [
     ),
     (
         "EuroLow",
-        r"^Sweden-[23]$|^Allsvenskan$|^Russia-?[23]$|^VHL$|^Mestis$|^German-[23]$|^Slovak-2$|^Swiss-B$"
-        r"|^CzRep-2$|^Czech2$|^Finland-2$",
+        r"^Sweden-[23]$|^(Hockey)?Allsvenskan$|^HockeyEttan$|^Russia-?[23]$|^VHL$|^Mestis$|^German-[23]$"
+        r"|^Slovak-?2$|^Slovakia2$|^Swiss-B$|^SL$|^CzRep-2$|^Czech2$|^Czechia2$|^Finland-2$",
     ),
     (
         "EuroJr",
-        r"-Jr\.?$|^J20|SuperElit|Nationell|U20|^Jr\. A|^MHL$|-U18$|^J18|^Swe-|^Fin-|^Rus-Jr|^Cze-|^U18 SM",
+        r"-Jr\.?$|^J20|SuperElit|Nationell|U20|^Jr\. A|^MHL$|-U18$|^J18|^Swe-|^Fin-|^Rus-Jr|^Russia-Jr|^Cze-"
+        r"|^U18 SM|^(Czechia|Russia|Slovakia|Finland|Sweden|Swiss|Germany) U1[78]$",
     ),
     (
         "JrA",
         r"^BCHL$|^AJHL$|^OPJHL$|^OJHL|^CCHL$|^SJHL$|^MJHL$|^CJHL$|^NAHL$|^EJHL$|^QJHL$|^AtJHL$|^KIJHL$|^MJAHL$"
-        r"|^MHL-Can|^NOJHL$|^SIJHL$|^EHL$|^USPHL",
+        r"|^MHL-Can|^NOJHL$|^SIJHL$|^EHL$|^USPHL|^ON-Jr\.A$|^GOJHL$|^NCDC$",
     ),
-    ("HS", r"^High-|^USHS|Prep|^HS-"),
+    ("HS", r"^High-|^USHS|Prep|^HS-|^1[68]U AAA$|^U1[68] AAA$|^CAHS$|^T1EHL$|^UMHSE?H?L$|^Minor-|^MWEHL$"),
 ]
 POSITIONS = ("C", "L", "R", "D", "G")
 
